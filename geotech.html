@@ -151,13 +151,16 @@
   </head>
   <body class="min-h-screen bg-gray-50">
     <script>
-    // let url = "https://static.readdy.ai/image/a63ec0b6f34fb9b66d50256c348ce6a2/13f0f75311357b249adf708678e6243f.png"
-    let url = "https://www.reservoir-media.com/wp-content/uploads/2020/08/DIVINE_30364-2-scaled.jpg"
-    window.addEventListener("DOMContentLoaded",()=>{
-        document.getElementById("myImage").src = url
-        localStorage.setItem("myImage",url)
-    })
-
+      let url =
+        "https://static.readdy.ai/image/a63ec0b6f34fb9b66d50256c348ce6a2/f8990d2a20fba43628bb51175cf3c0c1.png";
+      // let url = "https://www.reservoir-media.com/wp-content/uploads/2020/08/DIVINE_30364-2-scaled.jpg"
+      window.addEventListener("DOMContentLoaded", () => {
+        const images = document.querySelectorAll(".myImage");
+        images.forEach((img) => {
+          img.src = url;
+        });
+        localStorage.setItem("myImage", url);
+      });
     </script>
     <!-- Header/Navigation -->
     <header
@@ -167,44 +170,43 @@
         class="container mx-auto px-6 py-4 flex items-center justify-between"
       >
         <!-- Logo -->
-        <a href="#" class="flex items-center">
+        <a href="geotech.html" class="flex items-center">
           <img
-            id="myImage"
             src=""
             alt="Elite Geotech & NDT Logo"
-            class="h-[60px] w-auto"
+            class="h-[60px] w-auto myImage"
           />
         </a>
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center justify-center flex-1 px-8">
           <div class="flex items-center space-x-10">
-            <a
-              href="./geotech.html"
+            <!-- <a
+              href="../page/geotech.html"
               class="text-gray-800 hover:text-primary font-bold transition-colors text-sm uppercase tracking-wide"
               >Home</a
-            >
+            > -->
             <a
-              href="./aboutus.html"
+              href="../page/aboutus.html?from=geotech"
               class="text-gray-800 hover:text-primary font-bold transition-colors text-sm uppercase tracking-wide"
               >About Us</a
             >
             <a
-              href="./gallery.html"
+              href="../page/gallery.html?from=geotech"
               class="text-gray-800 hover:text-primary font-bold transition-colors text-sm uppercase tracking-wide"
               >Gallery</a
             >
             <!-- <a
-              href="./s"
+              href="../page/s"
               class="text-gray-800 hover:text-primary font-bold transition-colors text-sm uppercase tracking-wide"
               >Services</a
             > -->
             <a
-              href="./careers.html"
+              href="../page/careers.html?from=geotech"
               class="text-gray-800 hover:text-primary font-bold transition-colors text-sm uppercase tracking-wide"
               >Careers</a
             >
             <a
-              href="./contactus.html"
+              href="../page/contactus.html?from=geotech"
               class="text-gray-800 hover:text-primary font-bold transition-colors text-sm uppercase tracking-wide"
               >Contact Us</a
             >
@@ -213,7 +215,7 @@
         <!-- CTA Buttons -->
         <div class="hidden md:flex items-center space-x-4">
           <a
-            href="#"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSedOxVdlBScF4mcvAEL16t9YG_Ect1InCt6seVVsxDUBLoS8g/viewform?usp=dialog"
             class="px-6 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 !rounded-button whitespace-nowrap font-bold text-sm"
             >Get Started</a
           >
@@ -237,18 +239,18 @@
         id="mobile-menu"
       >
         <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
-          <a
-            href="./geotech.html"
+          <!-- <a
+            href="../page/geotech.html"
             class="text-gray-800 font-bold py-3 border-b border-gray-200 uppercase text-sm tracking-wide"
             >Home</a
-          >
+          > -->
           <a
-            href="./aboutus.html"
+            href="../page/aboutus.html"
             class="text-gray-800 font-bold py-3 border-b border-gray-200 uppercase text-sm tracking-wide"
             >About Us</a
           >
           <a
-            href="./gallery.html"
+            href="../page/gallery.html"
             class="text-gray-800 font-bold py-3 border-b border-gray-200 uppercase text-sm tracking-wide"
             >Gallery</a
           >
@@ -258,23 +260,23 @@
             >Services</a
           > -->
           <a
-            href="./careers.html"
+            href="../page/careers.html"
             class="text-gray-800 font-bold py-3 border-b border-gray-200 uppercase text-sm tracking-wide"
             >Careers</a
           >
           <a
-            href="./contactus.html"
+            href="../page/contactus.html"
             class="text-gray-800 font-bold py-3 border-b border-gray-200 uppercase text-sm tracking-wide"
             >Contact Us</a
           >
           <div class="flex flex-col space-y-3 pt-4">
             <a
-              href="#"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSedOxVdlBScF4mcvAEL16t9YG_Ect1InCt6seVVsxDUBLoS8g/viewform?usp=dialog"
               class="px-6 py-3 border-2 border-primary text-primary text-center !rounded-button whitespace-nowrap font-bold text-sm"
               >Get Started</a
             >
             <a
-              href="./contactus.html"
+              href="../page/contactus.html"
               class="px-6 py-3 bg-primary text-white text-center !rounded-button whitespace-nowrap font-bold text-sm"
               >Contact Us</a
             >
@@ -368,7 +370,7 @@
               class="text-center transform hover:-translate-y-1 transition-transform duration-300"
             >
               <p class="text-4xl font-bold text-white mb-2">
-                500<span class="text-primary">+</span>
+                200<span class="text-primary">+</span>
               </p>
               <p
                 class="text-white/80 text-sm font-medium uppercase tracking-wider"
@@ -380,7 +382,7 @@
               class="text-center transform hover:-translate-y-1 transition-transform duration-300"
             >
               <p class="text-4xl font-bold text-white mb-2">
-                50<span class="text-primary">+</span>
+                15<span class="text-primary">+</span>
               </p>
               <p
                 class="text-white/80 text-sm font-medium uppercase tracking-wider"
@@ -426,11 +428,11 @@
               prevent costly structural issues, reduce construction risks, and
               extend infrastructure lifespan.
             </p>
-            <a
+            <!-- <a
               href="#"
               class="inline-block px-5 py-2.5 bg-primary text-white font-medium hover:bg-primary/90 transition-colors !rounded-button whitespace-nowrap"
               >Discover Our Approach</a
-            >
+            > -->
           </div>
           <div class="md:w-1/2">
             <img
@@ -456,6 +458,183 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Service Card 1 -->
+          <div
+            class="service-card group bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+          >
+            <div class="relative group w-16 h-16 mx-auto mb-6">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full"
+              >
+                <i class="ri-earth-line ri-xl text-primary"></i>
+              </div>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-primary/90 text-white text-xs font-semibold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                Soil Test
+              </div>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-900 mb-3 text-center group-hover:text-primary transition-colors"
+            >
+              Soil Bearing Capacity Test
+            </h3>
+            <p class="text-gray-700 text-center">
+              Determine the safe bearing capacity of soil to support foundations
+              and prevent structural settlement issues.
+            </p>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div
+            class="service-card group bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+          >
+            <div class="relative group w-16 h-16 mx-auto mb-6">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full"
+              >
+                <i class="ri-scales-3-line ri-xl text-primary"></i>
+              </div>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-primary/90 text-white text-xs font-semibold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                Plate Load
+              </div>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-900 mb-3 text-center group-hover:text-primary transition-colors"
+            >
+              Plate Load Test
+            </h3>
+            <p class="text-gray-700 text-center">
+              Evaluate soil deformation characteristics and load-bearing
+              capacity through direct field testing methods.
+            </p>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div
+            class="service-card group bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+          >
+            <div class="relative group w-16 h-16 mx-auto mb-6">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full"
+              >
+                <i class="ri-hammer-line ri-xl text-primary"></i>
+              </div>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-primary/90 text-white text-[10px] font-semibold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2"
+              >
+                Core Cutting
+              </div>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-900 mb-3 text-center group-hover:text-primary transition-colors"
+            >
+              Core Cutting & Rebound Hammer Test
+            </h3>
+            <p class="text-gray-700 text-center">
+              Assess concrete strength and quality through non-destructive and
+              minimally invasive testing methods.
+            </p>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div
+            class="service-card group bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+          >
+            <div class="relative group w-16 h-16 mx-auto mb-6">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full"
+              >
+                <i class="ri-building-line ri-xl text-primary"></i>
+              </div>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-primary/90 text-white text-[10px] font-semibold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-2 text-center"
+              >
+                Pile Integrity
+              </div>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-900 mb-3 text-center group-hover:text-primary transition-colors"
+            >
+              Pile Integrity Testing
+            </h3>
+            <p class="text-gray-700 text-center">
+              Verify structural integrity of deep foundations using sonic echo
+              and impulse response methods.
+            </p>
+          </div>
+
+          <!-- Service Card 5 -->
+          <div
+            class="service-card group bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+          >
+            <div class="relative group w-16 h-16 mx-auto mb-6">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full"
+              >
+                <i class="ri-radar-line ri-xl text-primary"></i>
+              </div>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-primary/90 text-white text-[10px] font-semibold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-2 text-center"
+              >
+                Ultrasonic Test
+              </div>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-900 mb-3 text-center group-hover:text-primary transition-colors"
+            >
+              Ultrasonic Pulse Velocity Test
+            </h3>
+            <p class="text-gray-700 text-center">
+              Detect internal flaws, cracks, and voids in concrete structures
+              using advanced ultrasonic technology.
+            </p>
+          </div>
+
+          <!-- Service Card 6 -->
+          <div
+            class="service-card group bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+          >
+            <div class="relative group w-16 h-16 mx-auto mb-6">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full"
+              >
+                <i class="ri-file-chart-line ri-xl text-primary"></i>
+              </div>
+              <div
+                class="absolute inset-0 flex items-center justify-center bg-primary/90 text-white text-[10px] font-semibold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-2 text-center"
+              >
+                Site Report
+              </div>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-900 mb-3 text-center group-hover:text-primary transition-colors"
+            >
+              Detailed Site Report & Recommendations
+            </h3>
+            <p class="text-gray-700 text-center">
+              Comprehensive analysis and expert recommendations based on test
+              results to optimize your project design.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Our Specialized Services
+          </h2>
+          <p class="text-gray-700 max-w-3xl mx-auto">
+            Comprehensive testing and analysis solutions to ensure your
+            project's foundation is built on solid ground.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- Service Card 1 -->
           <div class="service-card bg-white p-6 rounded-lg shadow-md">
             <div
               class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mb-6 mx-auto"
@@ -465,12 +644,23 @@
             <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">
               Soil Bearing Capacity Test
             </h3>
-            <p class="text-gray-700 text-center">
-              Determine the safe bearing capacity of soil to support foundations
-              and prevent structural settlement issues.
-            </p>
+            <div class="relative group h-28 text-center">
+              <p
+                class="text-gray-700 group-hover:hidden transition-opacity duration-300"
+              >
+                Determine the safe bearing capacity of soil to support
+                foundations and prevent structural settlement issues.
+              </p>
+              <ul
+                class="hidden group-hover:list-disc group-hover:block text-gray-700 list-inside text-left mx-auto w-fit"
+              >
+                <li>Plate Load Test</li>
+                <li>Standard Penetration</li>
+                <li>Core Drilling Test</li>
+              </ul>
+            </div>
           </div>
-          <!-- Service Card 2 -->
+          <!-- Service Card 2 
           <div class="service-card bg-white p-6 rounded-lg shadow-md">
             <div
               class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mb-6 mx-auto"
@@ -484,8 +674,8 @@
               Evaluate soil deformation characteristics and load-bearing
               capacity through direct field testing methods.
             </p>
-          </div>
-          <!-- Service Card 3 -->
+          </div>-->
+          <!-- Service Card 3 
           <div class="service-card bg-white p-6 rounded-lg shadow-md">
             <div
               class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mb-6 mx-auto"
@@ -499,8 +689,8 @@
               Assess concrete strength and quality through non-destructive and
               minimally invasive testing methods.
             </p>
-          </div>
-          <!-- Service Card 4 -->
+          </div>-->
+          <!-- Service Card 4 
           <div class="service-card bg-white p-6 rounded-lg shadow-md">
             <div
               class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mb-6 mx-auto"
@@ -514,8 +704,8 @@
               Verify structural integrity of deep foundations using sonic echo
               and impulse response methods.
             </p>
-          </div>
-          <!-- Service Card 5 -->
+          </div>-->
+          <!-- Service Card 5 
           <div class="service-card bg-white p-6 rounded-lg shadow-md">
             <div
               class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mb-6 mx-auto"
@@ -529,7 +719,7 @@
               Detect internal flaws, cracks, and voids in concrete structures
               using advanced ultrasonic technology.
             </p>
-          </div>
+          </div>-->
           <!-- Service Card 6 -->
           <div class="service-card bg-white p-6 rounded-lg shadow-md">
             <div
@@ -540,10 +730,76 @@
             <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">
               Detailed Site Report & Recommendations
             </h3>
-            <p class="text-gray-700 text-center">
-              Comprehensive analysis and expert recommendations based on test
-              results to optimize your project design.
-            </p>
+            <div class="relative group h-28 text-center">
+              <p
+                class="text-gray-700 group-hover:hidden transition-opacity duration-300"
+              >
+                Comprehensive analysis and expert recommendations based on test
+                results to optimize your project design.
+              </p>
+              <ul
+                class="hidden group-hover:list-disc group-hover:block text-gray-700 list-inside text-left mx-auto w-fit"
+              >
+                <li>Plate Load Test</li>
+                <li>Standard Penetration</li>
+                <li>Core Drilling Test</li>
+              </ul>
+            </div>
+          </div>
+          <!--Service card 7-->
+          <div class="service-card bg-white p-6 rounded-lg shadow-md">
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mb-6 mx-auto"
+            >
+              <i class="ri-file-chart-line ri-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">
+              Non Destructive Test
+            </h3>
+            <div class="relative group h-28 text-center">
+              <p
+                class="text-gray-700 group-hover:hidden transition-opacity duration-300"
+              >
+                Assess the strength and integrity of structures without causing
+                damage using advanced techniques for accurate, in-situ
+                evaluation
+              </p>
+              <ul
+                class="hidden group-hover:list-disc group-hover:block text-gray-700 list-inside text-left mx-auto w-fit"
+              >
+                <li>Ultrasonic Pulse velocity</li>
+                <li>Rebound Hammer</li>
+                <li>Half Cell potential</li>
+                <li>Carbonation</li>
+                <li>Cover Meter</li>
+              </ul>
+            </div>
+          </div>
+          <!--Service card 8-->
+          <div class="service-card bg-white p-6 rounded-lg shadow-md">
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mb-6 mx-auto"
+            >
+              <i class="ri-file-chart-line ri-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">
+              Destructive Test
+            </h3>
+            <div class="relative group h-28 text-center">
+              <p
+                class="text-gray-700 group-hover:hidden transition-opacity duration-300"
+              >
+                Determine the exact load-bearing capacity of materials through
+                controlled failure methods to ensure structural reliability.
+              </p>
+              <ul
+                class="hidden group-hover:list-disc group-hover:block text-gray-700 list-inside text-left mx-auto w-fit"
+              >
+                <li>Concrete Core Test</li>
+                <li>Surface penetration</li>
+                <li>Cube Testing</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -599,10 +855,10 @@
                 Comprehensive soil investigation and foundation integrity
                 testing for a 40-story commercial complex.
               </p>
-              <div class="flex items-center text-primary">
+              <!-- <div class="flex items-center text-primary">
                 <span class="font-medium">View Case Study</span>
                 <i class="ri-arrow-right-line ri-lg ml-2"></i>
-              </div>
+              </div>-->
             </div>
           </div>
           <!-- Project Card 2 -->
@@ -620,10 +876,10 @@
                 NDT assessment and pile integrity testing for critical highway
                 infrastructure project.
               </p>
-              <div class="flex items-center text-primary">
+              <!--<div class="flex items-center text-primary">
                 <span class="font-medium">View Case Study</span>
                 <i class="ri-arrow-right-line ri-lg ml-2"></i>
-              </div>
+              </div>-->
             </div>
           </div>
           <!-- Project Card 3 -->
@@ -641,10 +897,10 @@
                 Soil bearing capacity and structural integrity testing for
                 precision manufacturing facility.
               </p>
-              <div class="flex items-center text-primary">
+              <!-- <div class="flex items-center text-primary">
                 <span class="font-medium">View Case Study</span>
                 <i class="ri-arrow-right-line ri-lg ml-2"></i>
-              </div>
+              </div>-->
             </div>
           </div>
         </div>
@@ -670,11 +926,11 @@
             need for safe, efficient, and compliant construction.
           </p>
           <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a
+            <!-- <a
               href="#"
               class="px-6 py-3 bg-primary text-white font-medium hover:bg-primary/90 transition-colors !rounded-button whitespace-nowrap"
               >Talk to Our Experts</a
-            >
+            >-->
             <a
               href="#"
               class="px-6 py-3 border border-primary text-primary font-medium hover:bg-primary hover:text-white transition-colors !rounded-button whitespace-nowrap"
@@ -687,13 +943,13 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white pt-16 pb-8">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div class="flex flex-wrap justify-between gap-y-10 mb-12 text-left">
           <!-- Company Info -->
-          <div>
+          <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[280px]">
             <img
-              src="https://static.readdy.ai/image/a63ec0b6f34fb9b66d50256c348ce6a2/f8990d2a20fba43628bb51175cf3c0c1.png"
+              src=""
               alt="Elite Geotech & NDT Logo"
-              class="h-12 w-auto mb-4"
+              class="h-12 w-auto mb-4 myImage"
             />
             <p class="text-gray-400 mb-4">
               Elite NDT & Geotech Engineering provides comprehensive testing and
@@ -728,47 +984,54 @@
             </div>
           </div>
           <!-- Quick Links -->
-          <div>
+          <div class="w-full lg:w-[23%] max-w-[300px] text-center">
             <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
             <ul class="space-y-2">
-              <li>
+              <!-- <li>
                 <a
                   href="#"
                   class="text-gray-400 hover:text-primary transition-colors"
                   >Home</a
                 >
-              </li>
+              </li> -->
               <li>
                 <a
-                  href="#"
+                  href="aboutus.html?from=geotech"
                   class="text-gray-400 hover:text-primary transition-colors"
                   >About Us</a
                 >
               </li>
               <li>
                 <a
+                  href="gallery.html?from=geotech"
+                  class="text-gray-400 hover:text-primary transition-colors"
+                  >Project Gallery</a
+                >
+              </li>
+              <!-- <li>
+                <a
                   href="#"
                   class="text-gray-400 hover:text-primary transition-colors"
                   >Services</a
                 >
-              </li>
-              <li>
+              </li> -->
+              <!-- <li>
                 <a
                   href="#"
                   class="text-gray-400 hover:text-primary transition-colors"
                   >Projects</a
                 >
-              </li>
+              </li> -->
               <li>
                 <a
-                  href="#"
+                  href="careers.html?from=geotech"
                   class="text-gray-400 hover:text-primary transition-colors"
                   >Careers</a
                 >
               </li>
               <li>
                 <a
-                  href="#"
+                  href="contactus.html/from=geotech"
                   class="text-gray-400 hover:text-primary transition-colors"
                   >Contact</a
                 >
@@ -776,7 +1039,7 @@
             </ul>
           </div>
           <!-- Services -->
-          <div>
+          <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[240px]">
             <h4 class="text-lg font-semibold mb-4">Our Services</h4>
             <ul class="space-y-2">
               <li>
@@ -786,34 +1049,34 @@
                   >Soil Bearing Capacity Test</a
                 >
               </li>
-              <li>
+              <!--<li>
                 <a
                   href="#"
                   class="text-gray-400 hover:text-primary transition-colors"
                   >Plate Load Test</a
                 >
-              </li>
-              <li>
+              </li>-->
+              <!-- <li>
                 <a
                   href="#"
                   class="text-gray-400 hover:text-primary transition-colors"
                   >Core Cutting & Rebound Hammer Test</a
                 >
-              </li>
-              <li>
+              </li>-->
+              <!--<li>
                 <a
                   href="#"
                   class="text-gray-400 hover:text-primary transition-colors"
                   >Pile Integrity Testing</a
                 >
-              </li>
-              <li>
+              </li>-->
+              <!--<li>
                 <a
                   href="#"
                   class="text-gray-400 hover:text-primary transition-colors"
                   >Ultrasonic Pulse Velocity Test</a
                 >
-              </li>
+              </li>-->
               <li>
                 <a
                   href="#"
@@ -821,10 +1084,24 @@
                   >Site Reports & Recommendations</a
                 >
               </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-primary transition-colors"
+                  >Non Destructive Test</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-primary transition-colors"
+                  >Destructive Test</a
+                >
+              </li>
             </ul>
           </div>
           <!-- Contact Info -->
-          <div>
+          <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[260px]">
             <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
             <ul class="space-y-3">
               <li class="flex items-start">
@@ -836,11 +1113,33 @@
                   400001, India</span
                 >
               </li>
-              <li class="flex items-center">
-                <div class="w-5 h-5 flex items-center justify-center mr-3">
-                  <i class="ri-phone-line text-primary"></i>
+              <li class="flex items-start">
+                <div class="w-5 h-5 flex items-center justify-center mr-2 mt-1">
+                  <i class="ri-map-pin-line text-primary"></i>
                 </div>
-                <span class="text-gray-400">+91 98765 43210</span>
+                <span class="text-gray-400"
+                  >Shop B-8, First Floor, Pravia Business Center, Spine Rd,
+                  opposite RTO, Jal Vayu Vihar, Sector No. 6, PCMC,
+                  Pimpri-Chinchwad, Maharashtra 412105</span
+                >
+              </li>
+              <li class="flex flex-col gap-2 items-start">
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mr-3 mt-1"
+                  >
+                    <i class="ri-phone-line text-primary"></i>
+                  </div>
+                  <span class="text-gray-400">+91 98765 43210</span>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mr-3 mt-1"
+                  >
+                    <i class="ri-phone-line text-primary"></i>
+                  </div>
+                  <span class="text-gray-400">02114-22500</span>
+                </div>
               </li>
               <li class="flex items-center">
                 <div class="w-5 h-5 flex items-center justify-center mr-3">
