@@ -40,6 +40,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <style>
       :where([class^="ri-"])::before {
         content: "\f3c2";
@@ -146,6 +153,9 @@
           url("https://readdy.ai/api/search-image?query=professional%20construction%20site%20with%20soil%20testing%20equipment%2C%20geotechnical%20engineers%20working%20at%20a%20construction%20site%2C%20modern%20equipment%20for%20soil%20testing%2C%20high%20quality%20professional%20photography%2C%20realistic%2C%20detailed%2C%20civil%20engineering&width=1920&height=1080&seq=1&orientation=landscape");
         background-size: cover;
         background-position: center;
+      }
+      .swiper-container {
+        overflow-x: hidden;
       }
     </style>
   </head>
@@ -839,80 +849,24 @@
             infrastructure projects.
           </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Project Card 1 -->
-          <div class="bg-white rounded-lg overflow-hidden shadow-md">
-            <img
-              src="https://readdy.ai/api/search-image?query=modern%20high-rise%20building%20construction%20site%2C%20foundation%20work%2C%20soil%20testing%20equipment%20visible%2C%20professional%20civil%20engineering%20project%2C%20realistic%20photography&width=400&height=300&seq=3&orientation=landscape"
-              alt="Commercial Tower Project"
-              class="w-full h-56 object-cover object-top"
-            />
-            <div class="p-6">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                Commercial Tower, Mumbai
-              </h3>
-              <p class="text-gray-700 mb-4">
-                Comprehensive soil investigation and foundation integrity
-                testing for a 40-story commercial complex.
-              </p>
-              <!-- <div class="flex items-center text-primary">
-                <span class="font-medium">View Case Study</span>
-                <i class="ri-arrow-right-line ri-lg ml-2"></i>
-              </div>-->
-            </div>
-          </div>
-          <!-- Project Card 2 -->
-          <div class="bg-white rounded-lg overflow-hidden shadow-md">
-            <img
-              src="https://readdy.ai/api/search-image?query=highway%20bridge%20construction%2C%20concrete%20testing%20equipment%2C%20engineers%20analyzing%20structural%20integrity%2C%20professional%20civil%20engineering%20project%2C%20realistic%20photography&width=400&height=300&seq=4&orientation=landscape"
-              alt="Highway Bridge Project"
-              class="w-full h-56 object-cover object-top"
-            />
-            <div class="p-6">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                NH-48 Highway Bridge
-              </h3>
-              <p class="text-gray-700 mb-4">
-                NDT assessment and pile integrity testing for critical highway
-                infrastructure project.
-              </p>
-              <!--<div class="flex items-center text-primary">
-                <span class="font-medium">View Case Study</span>
-                <i class="ri-arrow-right-line ri-lg ml-2"></i>
-              </div>-->
-            </div>
-          </div>
-          <!-- Project Card 3 -->
-          <div class="bg-white rounded-lg overflow-hidden shadow-md">
-            <img
-              src="https://readdy.ai/api/search-image?query=industrial%20facility%20construction%20site%2C%20soil%20testing%20equipment%2C%20geotechnical%20engineers%20working%2C%20professional%20civil%20engineering%20project%2C%20realistic%20photography&width=400&height=300&seq=5&orientation=landscape"
-              alt="Industrial Facility Project"
-              class="w-full h-56 object-cover object-top"
-            />
-            <div class="p-6">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                Pharma Manufacturing Facility
-              </h3>
-              <p class="text-gray-700 mb-4">
-                Soil bearing capacity and structural integrity testing for
-                precision manufacturing facility.
-              </p>
-              <!-- <div class="flex items-center text-primary">
-                <span class="font-medium">View Case Study</span>
-                <i class="ri-arrow-right-line ri-lg ml-2"></i>
-              </div>-->
-            </div>
-          </div>
+
+        <!-- Swiper Carousel -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper"></div>
+          <div class="swiper-pagination mt-6"></div>
         </div>
+
         <div class="text-center mt-10">
           <a
             href="#"
             class="inline-block px-6 py-3 border border-primary text-primary font-medium hover:bg-primary hover:text-white transition-colors !rounded-button whitespace-nowrap"
-            >View All Projects</a
           >
+            View All Projects
+          </a>
         </div>
       </div>
     </section>
+
     <!-- CTA Section -->
     <section class="py-16 bg-gray-50">
       <div class="container mx-auto px-4 max-w-4xl">
@@ -1039,6 +993,7 @@
             </ul>
           </div>
           <!-- Services -->
+        
           <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[240px]">
             <h4 class="text-lg font-semibold mb-4">Our Services</h4>
             <ul class="space-y-2">
@@ -1236,6 +1191,90 @@
         } else {
           console.log("Not running again.");
         }
+      });
+    </script>
+    <script>
+      const projects = [
+        {
+          title: "Kivale Dist Pune Maharashtra India ",
+          description:
+            "Comprehensive soil investigation and foundation integrity testing for a 40-story commercial complex.",
+          image:
+            "./assets/Picture1.jpg",
+        },
+        {
+          title: "Bhima Koregaon Pune Maharashtra Baner",
+          description:
+            "NDT assessment and pile integrity testing for critical highway infrastructure project.",
+          image:
+            "./assets/Picture2.jpg",
+        },
+        {
+          title: "S.no. 122(P), near S B PATIL SCHOOL, Ravet",
+          description:
+            "Soil bearing capacity and structural integrity testing for precision manufacturing facility.",
+          image:
+            "./assets/Picture3.jpg",
+        },
+        {
+          title: "Dudulgao near mangalam paradise Pune Maharashtra",
+          description:
+            "NDT assessment and pile integrity testing for critical highway infrastructure project.",
+          image:
+            "./assets/Picture4.jpg",
+        },
+        {
+          title: "Ambika Residency, Ashti Ahmednagar Maharashtra India",
+          description:
+            "Soil bearing capacity and structural integrity testing for precision manufacturing facility.",
+          image:
+           "./assets/Picture5.jpg",
+        },
+         {
+          title: "Rajguru nagar Pune, Maharashtra 411033",
+          description:
+            "Soil bearing capacity and structural integrity testing for precision manufacturing facility.",
+          image:
+            "./assets/Picture6.jpg",
+        },
+      ];
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const container = document.querySelector(".swiper-wrapper");
+
+        // Map the project array and inject HTML
+        const slides = projects.map((project) => {
+          return `
+        <div class="swiper-slide">
+          <div class="bg-white rounded-lg overflow-hidden shadow-md">
+            <img src="${project.image}" alt="${project.title}" class="w-full h-56 object-cover object-top" />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">${project.title}</h3>
+              <p class="text-gray-700 mb-4">${project.description}</p>
+            </div>
+          </div>
+        </div>
+      `;
+        });
+
+        // Add all slides to container
+        container.innerHTML = slides.join(""); // Join converts array to string
+
+        // Initialize Swiper
+        new Swiper(".swiper-container", {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          loop: true,
+          autoplay: { delay: 3000 },
+          breakpoints: {
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
       });
     </script>
   </body>
