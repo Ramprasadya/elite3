@@ -163,18 +163,6 @@
     </style>
   </head>
   <body class="min-h-screen bg-gray-50">
-    <script>
-      let url =
-        "https://firebasestorage.googleapis.com/v0/b/projects-afdbf.firebasestorage.app/o/logo%2Fgeotech.png?alt=media&token=0a632c2d-43ba-45b5-a60a-6b528730f14f";
-      // let url = "https://www.reservoir-media.com/wp-content/uploads/2020/08/DIVINE_30364-2-scaled.jpg"
-      window.addEventListener("DOMContentLoaded", () => {
-        const images = document.querySelectorAll(".myImage");
-        images.forEach((img) => {
-          img.src = url;
-        });
-        localStorage.setItem("myImage", url);
-      });
-    </script>
     <!-- Header/Navigation -->
     <header
       class="fixed top-0 left-0 right-0 bg-gradient-to-b from-gray-100 to-white bg-opacity-70 backdrop-blur-md z-50 rounded-b-xl shadow-lg"
@@ -183,11 +171,12 @@
         class="container mx-auto px-6 py-4 flex items-center justify-between"
       >
         <!-- Logo -->
-        <a href="geotech.html" class="flex items-center"style="height: 60px">
+        <a href="geotech.html" class="flex items-center" style="height: 60px">
           <img
+            id="navbar"
             src=""
             alt="Elite Geotech & NDT Logo"
-            class=" h-[130px] myImage"
+            class="h-[150px]"
           />
         </a>
         <!-- Desktop Navigation -->
@@ -314,8 +303,8 @@
             <span
               class="w-2 h-2 bg-yellow-400 rounded-full mr-3 animate-pulse"
             ></span>
-            <span class="text-yellow-300">Leading &nbsp;</span> NDT & Geotechnical
-            Solutions
+            <span class="text-yellow-300">Leading &nbsp;</span> NDT &
+            Geotechnical Solutions
           </span>
 
           <h1
@@ -906,9 +895,10 @@
           <!-- Company Info -->
           <div class="w-full -mb-4 sm:w-[48%] lg:w-[23%] max-w-[280px]">
             <img
+              id="footer"
               src=""
               alt="Elite Geotech & NDT Logo"
-              class="h-[125px] w-[130px] -mt-[2.5rem] myImage"
+              class="h-[125px] w-[130px] -mt-[2.5rem] "
             />
             <p class="text-gray-400 mb-4">
               Elite NDT & Geotech Engineering provides comprehensive testing and
@@ -1069,8 +1059,8 @@
                   <i class="ri-map-pin-line text-primary"></i>
                 </div>
                 <span class="text-gray-400"
-                  >Shop 2C, Shanti City Center, Talegaon Station Rd, Rajgurav Colony,
-                  Talegaon Dabhade, Maharashtra 410507</span
+                  >Shop 2C, Shanti City Center, Talegaon Station Rd, Rajgurav
+                  Colony, Talegaon Dabhade, Maharashtra 410507</span
                 >
               </li>
               <li class="flex items-start">
@@ -1276,6 +1266,22 @@
           //   clickable: true,
           // },
         });
+      });
+    </script>
+    <script>
+      let url =
+        "https://firebasestorage.googleapis.com/v0/b/projects-afdbf.firebasestorage.app/o/logo%2Fgeotech.png?alt=media&token=0a632c2d-43ba-45b5-a60a-6b528730f14f";
+      let footer = "https://firebasestorage.googleapis.com/v0/b/projects-afdbf.firebasestorage.app/o/logo%2Fgeotech%20white.png?alt=media&token=cf2a1167-4c9c-437e-8fa9-1d6898dab70a"
+
+      window.addEventListener("DOMContentLoaded", () => {
+        let image = document.getElementById("navbar");
+        image.src = url; // Works only for <img>
+        localStorage.setItem("navbar", url);
+      });
+      window.addEventListener("DOMContentLoaded", () => {
+        let  image = document.getElementById("footer");
+        image.src = footer; // Works only for <img>
+        localStorage.setItem("footer", url);
       });
     </script>
   </body>
